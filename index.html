@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TESLA – Electric Cars, Solar & Clean Energy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <svg viewBox="0 0 342 35" width="110" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 7-7h-31.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v7h30.3l-30.4 27.6h38.1a9.8 9.8 0 0 0 7-7h-31.2l17-20.8zM106.2 34.8h6.8l-13-34.8h-8.5l-12.9 34.8h6.8l2.8-7.8h15l2.9 7.8zm-17-14.6l5.7-15.9 5.5 15.9h-11.2zm115.5-20.2-14.5 20.8-14.6-20.8h-8v34.8h6.8V13.1L190 33.8h3.5l15.5-20.7v21.7h6.8V0h-11.1z"/>
+    </svg>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#models">Vehicles</a></li>
+    <li><a href="#energy">Energy</a></li>
+    <li><a href="#charging">Charging</a></li>
+    <li><a href="#discover">Discover</a></li>
+    <li><a href="#shop">Shop</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-btn" id="openSignIn">Sign In</button>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mob-close" id="mobClose">&times;</button>
+  <ul>
+    <li><a href="#models">Vehicles</a></li>
+    <li><a href="#energy">Energy</a></li>
+    <li><a href="#charging">Charging</a></li>
+    <li><a href="#discover">Discover</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#" id="mobSignIn">Sign In</a></li>
+  </ul>
+</div>
+
+<!-- ===== SIGN IN MODAL ===== -->
+<div class="modal" id="signInModal">
+  <div class="modal-box">
+    <button class="modal-close-x" onclick="closeSignIn()">&times;</button>
+    <div class="modal-logo">
+      <svg viewBox="0 0 342 35" width="80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 7-7h-31.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v7h30.3l-30.4 27.6h38.1a9.8 9.8 0 0 0 7-7h-31.2l17-20.8zM106.2 34.8h6.8l-13-34.8h-8.5l-12.9 34.8h6.8l2.8-7.8h15l2.9 7.8zm-17-14.6l5.7-15.9 5.5 15.9h-11.2zm115.5-20.2-14.5 20.8-14.6-20.8h-8v34.8h6.8V13.1L190 33.8h3.5l15.5-20.7v21.7h6.8V0h-11.1z"/>
+      </svg>
+    </div>
+    <h3>Sign In / Register</h3>
+    <p class="modal-sub">Join the Tesla community today</p>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" id="signName" placeholder="John Doe"/>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" id="signEmail" placeholder="you@example.com"/>
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" id="signAge" placeholder="25" min="16" max="120"/>
+    </div>
+    <div class="form-group">
+      <label>Date of Birth</label>
+      <input type="date" id="signDob"/>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="signPass" placeholder="••••••••"/>
+    </div>
+    <button class="btn btn-dark full" id="signSubmit">Create Account</button>
+    <p class="modal-terms">By continuing, you agree to Tesla's <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.</p>
+  </div>
+</div>
+
+<!-- ===== HERO 1 — MODEL 3 ===== -->
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1600&q=80')">
+  <div class="hero-top">
+    <h1 class="tesla-brand">TESLA</h1>
+  </div>
+  <div class="hero-content">
+    <h2>Model 3</h2>
+    <p>From $38,990 &nbsp;|&nbsp; Starting at $299/mo</p>
+    <div class="hero-btns">
+      <a href="#order" class="btn btn-dark">Order Now</a>
+      <a href="#models" class="btn btn-light">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HERO 2 — MODEL S ===== -->
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1600&q=80')">
+  <div class="hero-content">
+    <h2>Model S</h2>
+    <p>The Pinnacle of Performance</p>
+    <div class="hero-btns">
+      <a href="#order" class="btn btn-dark">Order Now</a>
+      <a href="#models" class="btn btn-light">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HERO 3 — CYBERTRUCK ===== -->
+<section class="hero" id="hero-cyber" style="background-image:url('blackcyber.jpeg')">
+  <div class="hero-content">
+    <h2>Cybertruck</h2>
+    <p>The Future is Stainless</p>
+    <div class="hero-btns">
+      <a href="#order" class="btn btn-white">Order Now</a>
+      <a href="#models" class="btn btn-outline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HERO 4 — ROADSTER ===== -->
+<section class="hero" id="hero-roadster" style="background-image:url('teslaroadster.jpeg')">
+  <div class="hero-content">
+    <h2>Roadster</h2>
+    <p>0–60 mph in 1.9 seconds. The quickest car ever made.</p>
+    <div class="hero-btns">
+      <a href="#order" class="btn btn-white">Reserve Now</a>
+      <a href="#models" class="btn btn-outline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODELS GRID ===== -->
+<section id="models" class="section">
+  <h2 class="section-title">Our <span class="red">Vehicles</span></h2>
+  <p class="section-sub">Every Tesla is built for performance, safety and efficiency</p>
+  <div class="models-grid">
+
+    <div class="model-card">
+      <div class="model-img-wrap">
+        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&q=80" alt="Model 3"/>
+        <div class="model-badge">Best Seller</div>
+      </div>
+      <div class="model-info">
+        <h3>Model 3</h3>
+        <p>Efficiency meets performance. Up to 358 miles of range.</p>
+        <div class="model-stats">
+          <div><span>358 mi</span><small>Range</small></div>
+          <div><span>3.1s</span><small>0-60 mph</small></div>
+          <div><span>162 mph</span><small>Top Speed</small></div>
+        </div>
+        <div class="model-price">From <strong>$38,990</strong></div>
+        <div class="model-btns">
+          <a href="#order" class="btn btn-dark sm">Order Now</a>
+          <a href="#" class="btn btn-outline-dark sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="model-card">
+      <div class="model-img-wrap">
+        <img src="teslamodely.jpeg" alt="Model S"/>
+        <div class="model-badge luxury">Luxury</div>
+      </div>
+      <div class="model-info">
+        <h3>Model Y</h3>
+        <p>Ludicrous performance in a luxury package. 405 mile range.</p>
+        <div class="model-stats">
+          <div><span>405 mi</span><small>Range</small></div>
+          <div><span>1.99s</span><small>0-60 mph</small></div>
+          <div><span>200 mph</span><small>Top Speed</small></div>
+        </div>
+        <div class="model-price">From <strong>$74,990</strong></div>
+        <div class="model-btns">
+          <a href="#order" class="btn btn-dark sm">Order Now</a>
+          <a href="#" class="btn btn-outline-dark sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="model-card">
+      <div class="model-img-wrap">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80" alt="Model X"/>
+      </div>
+      <div class="model-info">
+        <h3>Model X</h3>
+        <p>The SUV that does it all, with iconic Falcon Wing doors.</p>
+        <div class="model-stats">
+          <div><span>348 mi</span><small>Range</small></div>
+          <div><span>2.5s</span><small>0-60 mph</small></div>
+          <div><span>163 mph</span><small>Top Speed</small></div>
+        </div>
+        <div class="model-price">From <strong>$79,990</strong></div>
+        <div class="model-btns">
+          <a href="#order" class="btn btn-dark sm">Order Now</a>
+          <a href="#" class="btn btn-outline-dark sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="model-card">
+      <div class="model-img-wrap">
+        <img src="teslasemi.jpeg" alt="tesla semi"/>
+        <div class="model-badge">Most Popular</div>
+      </div>
+      <div class="model-info">
+        <h3>Tesla semi</h3>
+        <p>stainless-steel electric truck.</p>
+        <div class="model-stats">
+          <div><span>330 mi</span><small>Range</small></div>
+          <div><span>3.5s</span><small>0-60 mph</small></div>
+          <div><span>155 mph</span><small>Top Speed</small></div>
+        </div>
+        <div class="model-price">From <strong>$43,990</strong></div>
+        <div class="model-btns">
+          <a href="#order" class="btn btn-dark sm">Order Now</a>
+          <a href="#" class="btn btn-outline-dark sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="model-card">
+      <div class="model-img-wrap">
+        <img src="teslaroadster.jpeg" alt="Roadster"
+          onerror="this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80'"/>
+        <div class="model-badge sport">Sport</div>
+      </div>
+      <div class="model-info">
+        <h3>Roadster</h3>
+        <p>The quickest car ever made. 0-60 in 1.9 seconds.</p>
+        <div class="model-stats">
+          <div><span>620 mi</span><small>Range</small></div>
+          <div><span>1.9s</span><small>0-60 mph</small></div>
+          <div><span>250 mph</span><small>Top Speed</small></div>
+        </div>
+        <div class="model-price">From <strong>$200,000</strong></div>
+        <div class="model-btns">
+          <a href="#order" class="btn btn-dark sm">Reserve</a>
+          <a href="#" class="btn btn-outline-dark sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="model-card">
+      <div class="model-img-wrap">
+        <img src="blackcyber.jpeg" alt="Cybertruck"
+          onerror="this.src='https://images.unsplash.com/photo-1696446702183-a9cb7d2cf7de?w=800&q=80'"/>
+        <div class="model-badge cyber">New</div>
+      </div>
+      <div class="model-info">
+        <h3>Cybertruck</h3>
+        <p>Built for durability. Stainless steel exoskeleton and beast-mode power.</p>
+        <div class="model-stats">
+          <div><span>340 mi</span><small>Range</small></div>
+          <div><span>2.6s</span><small>0-60 mph</small></div>
+          <div><span>130 mph</span><small>Top Speed</small></div>
+        </div>
+        <div class="model-price">From <strong>$49,990</strong></div>
+        <div class="model-btns">
+          <a href="#order" class="btn btn-dark sm">Order Now</a>
+          <a href="#" class="btn btn-outline-dark sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-section">
+  <div class="stat">
+    <span class="stat-num" id="c1">0</span><span class="stat-plus">+</span>
+    <p>Vehicles Delivered</p>
+  </div>
+  <div class="stat">
+    <span class="stat-num" id="c2">0</span><span class="stat-plus">+</span>
+    <p>Superchargers Worldwide</p>
+  </div>
+  <div class="stat">
+    <span class="stat-num" id="c3">0</span><span class="stat-plus">+</span>
+    <p>Countries Served</p>
+  </div>
+  <div class="stat">
+    <span class="stat-num" id="c4">0</span><span class="stat-plus">+</span>
+    <p>Miles on Autopilot</p>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features-strip">
+  <div class="feature">
+    <div class="feature-icon">⚡</div>
+    <h4>Supercharger Network</h4>
+    <p>45,000+ Superchargers worldwide for fast charging on any trip</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">🤖</div>
+    <h4>Full Self-Driving</h4>
+    <p>Advanced AI-powered driver assistance on every Tesla</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">🔋</div>
+    <h4>Long Range Battery</h4>
+    <p>Up to 405 miles on a single charge — go further, worry less</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">📱</div>
+    <h4>Over-the-Air Updates</h4>
+    <p>Your car gets smarter and better every single night</p>
+  </div>
+</section>
+
+<!-- ===== ENERGY ===== -->
+<section id="energy" class="dark-section">
+  <div class="dark-inner">
+    <h2 class="section-title light">Solar & <span class="red">Energy</span></h2>
+    <p class="section-sub light">Power your home and life with clean, renewable energy</p>
+  </div>
+  <div class="energy-grid">
+    <div class="energy-card">
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Solar Panels"
+        onerror="this.src='https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=80'"/>
+      <div class="energy-info">
+        <h3>Solar Panels</h3>
+        <p>Power your home with clean energy. Average savings of $500/year.</p>
+        <a href="#" class="btn btn-red sm">Learn More</a>
+      </div>
+    </div>
+    <div class="energy-card">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Powerwall"
+        onerror="this.src='https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80'"/>
+      <div class="energy-info">
+        <h3>Powerwall</h3>
+        <p>24/7 energy security. Store solar energy and use it anytime.</p>
+        <a href="#" class="btn btn-red sm">Learn More</a>
+      </div>
+    </div>
+    <div class="energy-card">
+      <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80" alt="Solar Roof"
+        onerror="this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80'"/>
+      <div class="energy-info">
+        <h3>Solar Roof</h3>
+        <p>Beautiful solar tiles that generate clean energy for your home.</p>
+        <a href="#" class="btn btn-red sm">Learn More</a>
+      </div>
+    </div>
+    <div class="energy-card">
+      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80" alt="Megapack"
+        onerror="this.src='https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=80'"/>
+      <div class="energy-info">
+        <h3>Megapack</h3>
+        <p>Utility-scale energy storage powering cities with clean energy.</p>
+        <a href="#" class="btn btn-red sm">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORDER / PAYMENT ===== -->
+<section id="order" class="section">
+  <h2 class="section-title">Reserve Your <span class="red">Tesla</span></h2>
+  <p class="section-sub">Secure your reservation with Bitcoin — fast, borderless, decentralized</p>
+  <div class="order-container">
+    <div class="order-form">
+      <h3>Configure Your Order</h3>
+      <div class="form-group">
+        <label>Select Model</label>
+        <select id="modelSelect">
+          <option value="Model 3 – $38,990">Model 3 – $38,990</option>
+          <option value="Model S – $74,990">Model S – $74,990</option>
+          <option value="Model X – $79,990">Model X – $79,990</option>
+          <option value="Model Y – $43,990">Model Y – $43,990</option>
+          <option value="Cybertruck – $49,990">Cybertruck – $49,990</option>
+          <option value="Roadster – $200,000">Roadster – $200,000</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="orderName" placeholder="John Doe"/>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="orderEmail" placeholder="you@example.com"/>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="orderPhone" placeholder="+234 800 000 0000"/>
+      </div>
+      <button class="btn btn-dark full" id="payBtn">₿ Pay with Bitcoin</button>
+    </div>
+
+    <div class="btc-card">
+      <span class="btc-logo">₿</span>
+      <h3>Bitcoin Payment</h3>
+      <p>Fast, secure and borderless payments for your Tesla reservation.</p>
+      <div class="btc-address-box">
+        <small>Send BTC to this wallet address:</small>
+        <code id="btcAddress">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</code>
+        <button class="copy-btn" onclick="copyBTC()">Copy</button>
+      </div>
+      <div class="qr-box">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="130">
+          <rect width="100" height="100" fill="white"/>
+          <rect x="10" y="10" width="30" height="30" fill="black"/>
+          <rect x="15" y="15" width="20" height="20" fill="white"/>
+          <rect x="20" y="20" width="10" height="10" fill="black"/>
+          <rect x="60" y="10" width="30" height="30" fill="black"/>
+          <rect x="65" y="15" width="20" height="20" fill="white"/>
+          <rect x="70" y="20" width="10" height="10" fill="black"/>
+          <rect x="10" y="60" width="30" height="30" fill="black"/>
+          <rect x="15" y="65" width="20" height="20" fill="white"/>
+          <rect x="20" y="70" width="10" height="10" fill="black"/>
+          <rect x="45" y="10" width="10" height="10" fill="black"/>
+          <rect x="45" y="25" width="10" height="10" fill="black"/>
+          <rect x="45" y="45" width="10" height="10" fill="black"/>
+          <rect x="60" y="45" width="10" height="10" fill="black"/>
+          <rect x="75" y="45" width="10" height="10" fill="black"/>
+          <rect x="45" y="60" width="10" height="10" fill="black"/>
+          <rect x="60" y="60" width="10" height="10" fill="black"/>
+          <rect x="60" y="75" width="25" height="10" fill="black"/>
+          <rect x="45" y="75" width="10" height="10" fill="black"/>
+        </svg>
+        <small>Scan QR to pay</small>
+      </div>
+      <div class="btc-price" id="btcPrice">Loading live BTC price...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAYMENT MODAL ===== -->
+<div class="modal" id="payModal">
+  <div class="modal-box success-box">
+    <button class="modal-close-x" onclick="closePayModal()">&times;</button>
+    <div class="modal-icon">✅</div>
+    <h3>Payment Initiated!</h3>
+    <p id="payMsg">Your reservation is confirmed. Tap below to complete on WhatsApp.</p>
+    <div class="modal-actions">
+      <a id="waLink" href="#" target="_blank" class="btn btn-wa full">
+        <svg viewBox="0 0 32 32" width="20" fill="white" xmlns="http://www.w3.org/2000/svg" style="margin-right:8px">
+          <path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.737 5.475 2.027 7.782L0 32l8.418-2.004A15.936 15.936 0 0 0 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm8.307 22.678c-.345.97-1.703 1.775-2.822 2.008-.752.16-1.733.288-5.036-1.082-4.227-1.726-6.954-5.992-7.163-6.27-.201-.278-1.68-2.237-1.68-4.265 0-2.028 1.062-3.022 1.44-3.438.345-.37.75-.463 1-.463.25 0 .5.003.72.013.231.011.54-.088.844.644.345.81 1.172 2.838 1.274 3.044.101.207.169.449.034.72-.127.277-.19.449-.38.693-.19.244-.4.546-.572.733-.19.207-.387.43-.167.843.22.412.978 1.612 2.099 2.609 1.443 1.288 2.662 1.687 3.044 1.877.382.19.604.16.828-.096.224-.257.962-1.123 1.219-1.509.256-.387.512-.32.862-.192.35.127 2.228 1.05 2.609 1.241.382.19.636.286.73.446.092.16.092.924-.253 1.894z"/>
+        </svg>
+        Continue on WhatsApp
+      </a>
+      <button class="btn btn-outline-dark full" onclick="closePayModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<a class="wa-float" href="https://wa.me/2348012345678?text=Hi!%20I%20have%20a%20question%20about%20Tesla." target="_blank">
+  <svg viewBox="0 0 32 32" width="24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.737 5.475 2.027 7.782L0 32l8.418-2.004A15.936 15.936 0 0 0 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm8.307 22.678c-.345.97-1.703 1.775-2.822 2.008-.752.16-1.733.288-5.036-1.082-4.227-1.726-6.954-5.992-7.163-6.27-.201-.278-1.68-2.237-1.68-4.265 0-2.028 1.062-3.022 1.44-3.438.345-.37.75-.463 1-.463.25 0 .5.003.72.013.231.011.54-.088.844.644.345.81 1.172 2.838 1.274 3.044.101.207.169.449.034.72-.127.277-.19.449-.38.693-.19.244-.4.546-.572.733-.19.207-.387.43-.167.843.22.412.978 1.612 2.099 2.609 1.443 1.288 2.662 1.687 3.044 1.877.382.19.604.16.828-.096.224-.257.962-1.123 1.219-1.509.256-.387.512-.32.862-.192.35.127 2.228 1.05 2.609 1.241.382.19.636.286.73.446.092.16.092.924-.253 1.894z"/>
+  </svg>
+  <span class="wa-label">Chat with Us</span>
+</a>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="footer-top">
+    <svg viewBox="0 0 342 35" width="100" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 7-7h-31.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v7h30.3l-30.4 27.6h38.1a9.8 9.8 0 0 0 7-7h-31.2l17-20.8zM106.2 34.8h6.8l-13-34.8h-8.5l-12.9 34.8h6.8l2.8-7.8h15l2.9 7.8zm-17-14.6l5.7-15.9 5.5 15.9h-11.2zm115.5-20.2-14.5 20.8-14.6-20.8h-8v34.8h6.8V13.1L190 33.8h3.5l15.5-20.7v21.7h6.8V0h-11.1z"/>
+    </svg>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Tesla</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Investor Relations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Vehicles</h4>
+      <ul>
+        <li><a href="#">Model S</a></li>
+        <li><a href="#">Model 3</a></li>
+        <li><a href="#">Model X</a></li>
+        <li><a href="#">Model Y</a></li>
+        <li><a href="#">Cybertruck</a></li>
+        <li><a href="#">Roadster</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Energy</h4>
+      <ul>
+        <li><a href="#">Solar Panels</a></li>
+        <li><a href="#">Solar Roof</a></li>
+        <li><a href="#">Powerwall</a></li>
+        <li><a href="#">Megapack</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Find Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <strong>TESLA</strong>, Inc. &nbsp;—&nbsp; <em>Educational Project. Not affiliated with Tesla, Inc.</em></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
